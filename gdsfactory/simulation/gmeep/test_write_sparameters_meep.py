@@ -149,6 +149,6 @@ if __name__ == "__main__":
     # test_sparameterslazy_parallelism()
     # test_sparameters_straight()
     # test_sparameters_straight_symmetric()
-    test_sparameters_straight_batch()
-    # test_sparameters_straight_mpi()
+    # test_sparameters_straight_batch()
+    test_sparameters_straight_mpi()
     # test_sparameters_crossing_symmetric()

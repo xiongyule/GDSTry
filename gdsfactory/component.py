@@ -1,5 +1,6 @@
 import datetime
 import hashlib
+import itertools
 import math
 import os
 import pathlib
@@ -174,6 +175,10 @@ class Component(_GeometryHelper):
     @name.setter
     def name(self, value):
         self._cell.name = value
+
+    def __iter__(self):
+        """You can iterate over polygons, paths, labels and references."""
+        return itertools.chain(self.polygons, self.paths, self.labels, self.references)
 
     def get_polygons(
         self,

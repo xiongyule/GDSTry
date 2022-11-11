@@ -49,7 +49,7 @@ def get_meep_geometry_from_component(
             # center = mp.Vector3(0, 0, (zmin_um + height) / 2)
 
             for polygon in polygons:
-                vertices = [mp.Vector3(p[0], p[1], zmin_um) for p in polygon]
+                vertices = [mp.Vector3(p[0], p[1], zmin_um) for p in polygon.points]
                 material_name = layer_to_material[layer]
                 if material_name:
                     material = get_material(
